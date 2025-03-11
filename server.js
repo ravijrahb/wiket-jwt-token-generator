@@ -17,7 +17,7 @@ app.post("/api/authenticate", (req, res) => {
         const adminUserUUID = process.env.ADMIN_USER_UUID;
         const secretKey = process.env.SECRET_KEY;
         const audience = process.env.AUDIENCE;
-        //const issuer = process.env.ISSUER;
+        const issuer = process.env.ISSUER;
         const expirationTime = process.env.EXPIRATION_TIME || 900; // Default to 15 minutes if not set
 
         if (!adminUserUUID || !secretKey || !audience || !issuer) {
